@@ -1,0 +1,205 @@
+/* --- Authentication Pages Styling --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.auth-body {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6;
+}
+
+/* Left Side - Image */
+.auth-image {
+    flex: 1;
+    /* Using a high-quality image of an African woman at a fresh produce market */
+    background: linear-gradient(rgba(27, 94, 32, 0.6), rgba(0, 0, 0, 0.4)), 
+                url('https://images.unsplash.com/photo-1590779033100-9f60a05a013d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    color: #fff;
+    position: relative;
+}
+
+.auth-image h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.auth-image p {
+    font-size: 1.2rem;
+    max-width: 500px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.auth-logo-top {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Right Side - Form */
+.auth-form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: #ffffff;
+}
+
+.auth-box {
+    width: 100%;
+    max-width: 450px;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.auth-header i {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.auth-header h2 {
+    color: #222;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.auth-header p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Form Elements */
+.auth-form .input-group {
+    margin-bottom: 20px;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+    font-size: 0.9rem;
+}
+
+.auth-form input, 
+.auth-form select {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background: #f9f9f9;
+    transition: 0.3s;
+}
+
+.auth-form input:focus, 
+.auth-form select:focus {
+    outline: none;
+    border-color: #2e7d32;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.1);
+}
+
+.btn-block {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background: #2e7d32;
+    color: #fff;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-block:hover {
+    background: #1b5e20;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.3);
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.auth-footer a {
+    font-weight: 600;
+    color: #2e7d32;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Alerts */
+.alert {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.alert.error {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+
+.alert.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+.alert a {
+    color: #2e7d32;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .auth-body {
+        flex-direction: column;
+    }
+    .auth-image {
+        display: none; /* Hide the image on small screens to save space */
+    }
+    .auth-form-container {
+        padding: 20px;
+    }
+}
